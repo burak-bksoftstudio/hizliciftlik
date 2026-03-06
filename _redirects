@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+# www -> apex (configure domain alias in CF dashboard instead, but fallback here)
+# /home  /  301

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hızlı Çiftlik — Kurbanlık Satış ve Yönetim Uygulaması | Könez Besi Çiftliği</title>
+  <meta name="description"
+    content="Hızlı Çiftlik, kurban satış yerleri ve işletmeleri için geliştirilmiş kurbanlık yönetim uygulamasıdır. Müşteri kaydı, hayvan kaydı, hisse yönetimi, ödeme takibi, kesim sırası ve SMS bildirimleri tek ekranda." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🐄</span>
+        <span class="logo-text">Hızlı<span class="logo-sub"> Çiftlik</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#ozellikler">Özellikler</a>
+        <a href="#nasil-calisir">Nasıl Çalışır</a>
+        <a href="#yorumlar">Yorumlar</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://wa.me/905XXXXXXXXX" class="btn btn-whatsapp" id="navWhatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.532 5.847L.058 23.617a.5.5 0 0 0 .611.665l5.985-1.57A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.497-5.188-1.367l-.372-.219-3.853 1.011 1.031-3.763-.238-.389A9.941 9.941 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+          </svg>
+          WhatsApp
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Könez Besi Çiftliği
+        </div>
+        <h1 class="hero-title reveal">
+          Kurban Takibini<br />
+          <span class="gradient-text">Dijitale Taşı</span>
+        </h1>
+        <p class="hero-desc reveal">
+          Hisseli ve müstakil satışlardan ödeme takibine, kesim sırası yönetiminden
+          SMS bildirimlerine kadar tüm süreçleri tek uygulamada yönetin.
+        </p>
+        <div class="platform-badges reveal">
+          <span class="plat-badge web">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            Web
+          </span>
+          <span class="plat-badge android">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.18 23.76a2 2 0 0 0 2.84-.04l.11-.09 9.94-9.94-2.82-2.82-10.07 9.9zM20.84 9.9l-3.1-1.77-3.17 3.17 3.2 3.2 3.08-1.75a1.97 1.97 0 0 0 0-2.85zM2.01 1.05A1.97 1.97 0 0 0 1.5 2.5v19a1.97 1.97 0 0 0 .51 1.45l.07.07 10.65-10.64v-.25L2.08.98zM13.25 12l3.22-3.22-9.96-5.7c-.36-.2-.74-.26-1.1-.18z" />
+            </svg>
+            Android
+          </span>
+          <span class="plat-badge ios-soon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+            </svg>
+            iOS · Çok Yakında
+          </span>
+        </div>
+        <div class="hero-actions reveal">
+          <a href="#iletisim" class="btn btn-primary" id="heroDemoBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.12 6.12l.94-.94a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 21.73 17.3l.19-.38z" />
+            </svg>
+            Demo Talep Et
+          </a>
+          <a href="https://wa.me/905XXXXXXXXX" class="btn btn-outline" id="heroWhatsappBtn" target="_blank"
+            rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.532 5.847L.058 23.617a.5.5 0 0 0 .611.665l5.985-1.57A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.497-5.188-1.367l-.372-.219-3.853 1.011 1.031-3.763-.238-.389A9.941 9.941 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+            </svg>
+            WhatsApp'tan Ulaş
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CSS Phone Mockup — No external image needed -->
+      <div class="hero-visual reveal-right">
+        <div class="hero-phone-wrap">
+          <div class="hero-phone">
+            <div class="hero-phone-notch"></div>
+            <div class="hero-phone-screen">
+              <div class="hps-header">
+                <span class="hps-logo">🐄 Hızlı Çiftlik</span>
+                <span class="hps-notif">🔔</span>
+              </div>
+              <div class="hps-greeting">Merhaba, İskender Bey 👋</div>
+              <div class="hps-cards">
+                <div class="hps-card green">
+                  <span class="hps-card-num">248</span>
+                  <span class="hps-card-label">Toplam Satış</span>
+                </div>
+                <div class="hps-card gold">
+                  <span class="hps-card-num">₺486K</span>
+                  <span class="hps-card-label">Tahsilat</span>
+                </div>
+              </div>
+              <div class="hps-section-label">Kesim Sırası</div>
+              <div class="hps-queue-row done-q">
+                <span class="hps-qnum">001</span>
+                <span class="hps-qname">Murat Demir</span>
+                <span class="hps-qbadge done-b">✓</span>
+              </div>
+              <div class="hps-queue-row active-q">
+                <span class="hps-qnum">002</span>
+                <span class="hps-qname">Ayşe Kaya</span>
+                <span class="hps-qbadge now-b">⚡ Şu An</span>
+              </div>
+              <div class="hps-queue-row">
+                <span class="hps-qnum">003</span>
+                <span class="hps-qname">Fatma Arslan</span>
+                <span class="hps-qbadge time-b">10:30</span>
+              </div>
+              <div class="hps-queue-row">
+                <span class="hps-qnum">004</span>
+                <span class="hps-qname">Kemal Şahin</span>
+                <span class="hps-qbadge time-b">11:15</span>
+              </div>
+              <div class="hps-section-label">SMS Bildirimleri</div>
+              <div class="hps-sms-row">
+                <span class="hps-sms-icon">📱</span>
+                <span class="hps-sms-text">248 müşteriye bayram kutlaması gönderildi</span>
+              </div>
+              <div class="hps-sms-row">
+                <span class="hps-sms-icon">⏰</span>
+                <span class="hps-sms-text">Kesim saati bildirimleri hazır</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-phone-glow"></div>
+        </div>
+        <div class="floating-card card-1">
+          <span class="fc-icon">✅</span>
+          <div>
+            <strong>Ahmet Yılmaz</strong>
+            <small>Ödeme tamamlandı</small>
+          </div>
+        </div>
+        <div class="floating-card card-2">
+          <span class="fc-icon">🔔</span>
+          <div>
+            <strong>SMS Gönderildi</strong>
+            <small>248 müşteriye bildirim</small>
+          </div>
+        </div>
+        <div class="floating-card card-3">
+          <span class="fc-icon">🕐</span>
+          <div>
+            <strong>Sıra No: 007</strong>
+            <small>Tahmini: 10:45</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="features" id="ozellikler">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Temel Özellikler</span>
+        <h2>İşletmeniz İçin Tasarlandı</h2>
+        <p>Kurban satış yerleri ve işletmeleri için uçtan uca dijital yönetim.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card reveal" id="feat-musteri">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3>Müşteri Kaydı</h3>
+          <p>Ad, soyad, telefon gibi müşteri bilgilerini hızlıca kaydedin. Her müşteriye ait hayvan ve ödeme bilgilerine
+            tek ekrandan ulaşın.</p>
+          <ul class="feature-list">
+            <li>Hızlı müşteri ekleme</li>
+            <li>Müşteri bazlı detay görünümü</li>
+            <li>Kolay arama ve filtreleme</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal" id="feat-hayvan">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+              <line x1="12" y1="12" x2="12" y2="16" />
+              <line x1="10" y1="14" x2="14" y2="14" />
+            </svg>
+          </div>
+          <h3>Hayvan Kaydı &amp; Hisse Yönetimi</h3>
+          <p>Büyük veya küçükbaş hayvanı kaydedin. Büyükbaş için 7 hisse girişi yapın, her hisseyi farklı müşterilere
+            atayın. Müstakil hayvan satışı da desteklenir.</p>
+          <ul class="feature-list">
+            <li>Büyük / küçükbaş hayvan kaydı</li>
+            <li>Hisseli satış (1/7 — 7/7)</li>
+            <li>Müstakil satış desteği</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal" id="feat-sira">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="8" y1="6" x2="21" y2="6" />
+              <line x1="8" y1="12" x2="21" y2="12" />
+              <line x1="8" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="6" x2="3.01" y2="6" />
+              <line x1="3" y1="12" x2="3.01" y2="12" />
+              <line x1="3" y1="18" x2="3.01" y2="18" />
+            </svg>
+          </div>
+          <h3>Kesim Sırasına Alma</h3>
+          <p>Kaydedilen müşteri ve hayvanı kesim sırasına ekleyin. Sıra numarası otomatik atanır, günlük kesim listesi
+            anlık güncellenir.</p>
+          <ul class="feature-list">
+            <li>Otomatik sıra numarası</li>
+            <li>Günlük sıra listesi</li>
+            <li>Anlık sıra durumu takibi</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal" id="feat-odeme">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+          </div>
+          <h3>Ödeme Takibi</h3>
+          <p>Ödenen, kısmen ödenen ve bekleyen miktarları müşteri bazında takip edin. Kalan bakiyeyi kaçırmayın,
+            tahsilat raporunuzu her an görün.</p>
+          <ul class="feature-list">
+            <li>Peşinat ve kalan bakiye</li>
+            <li>Kısmi ödeme desteği</li>
+            <li>Tahsilat özet raporu</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal" id="feat-sms">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <h3>SMS Bildirimi Gönderme</h3>
+          <p>Hazır şablonlarla tüm müşterilerinize tek tuşla toplu SMS gönderin. Bayram kutlaması, ödeme hatırlatması
+            veya kesim saati bildirimi için ayrı şablonlar.</p>
+          <ul class="feature-list">
+            <li>Toplu SMS gönderimi</li>
+            <li>Bayram kutlama şablonu</li>
+            <li>Ödeme hatırlatma şablonu</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal" id="feat-bildirim">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3>Kesim Saati Bildirimi</h3>
+          <p>Müşterileriniz defalarca aramak zorunda kalmasın. Tahmini kesim saat ve sıra numarasını SMS ile gönderin,
+            kesim günü düzeni koruyun.</p>
+          <ul class="feature-list">
+            <li>Tahmini kesim saati SMS'i</li>
+            <li>Sıra yaklaştığında bildirim</li>
+            <li>Kesim günü kargaşasını bitir</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="how-it-works" id="nasil-calisir">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Süreç</span>
+        <h2>Nasıl Çalışır?</h2>
+        <p>4 adımda kurban organizasyonunuzu profesyonelleştirin.</p>
+      </div>
+      <div class="steps-container">
+        <div class="steps-line"></div>
+        <div class="step reveal" id="step-1">
+          <div class="step-number">01</div>
+          <div class="step-card">
+            <div class="step-icon">📋</div>
+            <h3>Müşteri & Satış Kaydı</h3>
+            <p>Müşterilerinizi uygulamaya ekleyin. Hisseli veya müstakil satış türünü belirleyin, hayvan türü ve kilo
+              bilgilerini kaydedin. Tüm satışlarınız tek yerde.</p>
+          </div>
+        </div>
+        <div class="step reveal" id="step-2">
+          <div class="step-number">02</div>
+          <div class="step-card">
+            <div class="step-icon">💰</div>
+            <h3>Ödeme Takibi</h3>
+            <p>Her müşterinin ödeme durumunu anlık görün. Peşinat, taksit veya tam ödeme seçeneklerini kaydedin.
+              Bakiyesi olan müşterilere otomatik hatırlatma gönderin.</p>
+          </div>
+        </div>
+        <div class="step reveal" id="step-3">
+          <div class="step-number">03</div>
+          <div class="step-card">
+            <div class="step-icon">📱</div>
+            <h3>Bildirim & Bayram Mesajı</h3>
+            <p>Kurban bayramı öncesinde tüm müşterilerinize hazırlık mesajları ve kişisel bayram kutlamaları gönderin.
+              WhatsApp veya SMS ile kolayca iletişim kurun.</p>
+          </div>
+        </div>
+        <div class="step reveal" id="step-4">
+          <div class="step-number">04</div>
+          <div class="step-card">
+            <div class="step-icon">🐄</div>
+            <h3>Kesim Günü Yönetimi</h3>
+            <p>Kesim günü sıra listesini belirleyin. Her müşteriye otomatik sıra numarası ve tahmini kesim saati
+              bildirin. Karmaşık yerine organize ve huzurlu bir gün geçirin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APP SCREENS ===================== -->
+  <section class="app-screens" id="ekranlar">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Uygulama</span>
+        <h2>iOS & Android'de Kullanıma Hazır</h2>
+        <p>Modern, sezgisel arayüz ile tüm süreçler parmaklarınızın ucunda.</p>
+      </div>
+      <div class="screens-showcase reveal">
+        <div class="screen-info">
+          <div class="screen-tabs">
+            <button class="screen-tab active" data-tab="dashboard" id="tabDashboard">📊 Dashboard</button>
+            <button class="screen-tab" data-tab="sira" id="tabSira">📋 Kesim Sırası</button>
+            <button class="screen-tab" data-tab="odeme" id="tabOdeme">💰 Ödemeler</button>
+            <button class="screen-tab" data-tab="sms" id="tabSms">📱 Mesajlar</button>
+          </div>
+          <div class="screen-content" id="screenContent">
+            <div class="screen-detail active" data-content="dashboard">
+              <h3>Tüm Veriler Tek Bakışta</h3>
+              <p>Ana ekrandan toplam satış sayısı, tahsilat durumu, bekleyen ödemeler ve kesim günü istatistiklerini
+                anında görün.</p>
+              <ul class="check-list">
+                <li>Gerçek zamanlı satış özeti</li>
+                <li>Ödeme durumu göstergesi</li>
+                <li>Günlük kesim programı</li>
+                <li>Bildirim merkezi</li>
+              </ul>
+            </div>
+            <div class="screen-detail" data-content="sira">
+              <h3>Sıra Karmaşasına Son</h3>
+              <p>Kesim günü sıra listesi otomatik oluşturulur. Her müşteri sıra numarasını önceden bilir, kimse beklemez
+                kimse sormak zorunda kalmaz.</p>
+              <ul class="check-list">
+                <li>Otomatik sıra ataması</li>
+                <li>Tahmini saat hesaplama</li>
+                <li>Sıra yaklaştığında bildirim</li>
+                <li>Dijital sıra listesi</li>
+              </ul>
+            </div>
+            <div class="screen-detail" data-content="odeme">
+              <h3>Her Ödeme Kayıt Altında</h3>
+              <p>Peşinat, ara ödeme ve kalan bakiye bilgilerini kaydedin. Tahsilat raporlarını anlık görün, ödeme almayı
+                unutmayın.</p>
+              <ul class="check-list">
+                <li>Müşteri bazlı borç takibi</li>
+                <li>Ödeme geçmişi</li>
+                <li>Kalan bakiye uyarıları</li>
+                <li>Tahsilat raporu</li>
+              </ul>
+            </div>
+            <div class="screen-detail" data-content="sms">
+              <h3>Toplu Mesaj, Kişisel Dokunuş</h3>
+              <p>Hazır şablonlarla tüm müşterilerinize bayram kutlaması, ödeme hatırlatması veya kesim saati bildirimi
+                gönderin.</p>
+              <ul class="check-list">
+                <li>Bayram kutlama mesajı</li>
+                <li>Kesim saati bildirimi</li>
+                <li>Ödeme hatırlatması</li>
+                <li>WhatsApp entegrasyonu</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="screen-mockup-area">
+          <div class="phone-frame">
+            <div class="phone-notch-bar"></div>
+            <div class="phone-screen" id="phoneScreen">
+              <div class="app-screen active" data-screen="dashboard">
+                <div class="app-topbar">
+                  <span class="app-logo-sm">🐄 Hızlı Çiftlik</span>
+                  <span class="app-notif">🔔</span>
+                </div>
+                <div class="app-body">
+                  <div class="app-greeting">Merhaba, Ahmet Bey 👋</div>
+                  <div class="app-cards-row">
+                    <div class="app-mini-card green">
+                      <span class="amc-num">248</span>
+                      <span class="amc-label">Toplam Satış</span>
+                    </div>
+                    <div class="app-mini-card gold">
+                      <span class="amc-num">₺486K</span>
+                      <span class="amc-label">Tahsilat</span>
+                    </div>
+                  </div>
+                  <div class="app-section-title">Son İşlemler</div>
+                  <div class="app-list-item">
+                    <span class="ali-dot green"></span>
+                    <span class="ali-name">Murat Demir</span>
+                    <span class="ali-status paid">Ödendi</span>
+                  </div>
+                  <div class="app-list-item">
+                    <span class="ali-dot yellow"></span>
+                    <span class="ali-name">Ayşe Kaya</span>
+                    <span class="ali-status pending">Bekliyor</span>
+                  </div>
+                  <div class="app-list-item">
+                    <span class="ali-dot green"></span>
+                    <span class="ali-name">Fatma Arslan</span>
+                    <span class="ali-status paid">Ödendi</span>
+                  </div>
+                  <div class="app-section-title">Bugün Kesim</div>
+                  <div class="app-queue-item">
+                    <span class="aqi-num">001</span>
+                    <span class="aqi-name">Mehmet Yıldız</span>
+                    <span class="aqi-time">09:00</span>
+                  </div>
+                  <div class="app-queue-item">
+                    <span class="aqi-num">002</span>
+                    <span class="aqi-name">Zeynep Ak</span>
+                    <span class="aqi-time">09:45</span>
+                  </div>
+                </div>
+              </div>
+              <div class="app-screen" data-screen="sira">
+                <div class="app-topbar">
+                  <span class="app-logo-sm">📋 Kesim Sırası</span>
+                  <span class="app-badge-count">18</span>
+                </div>
+                <div class="app-body">
+                  <div class="app-section-title">Bugünün Listesi — 15 Temmuz</div>
+                  <div class="queue-row done"><span class="qr-num">001</span><span class="qr-name">Murat
+                      Demir</span><span class="qr-time done-badge">✓ Tamam</span></div>
+                  <div class="queue-row active-row"><span class="qr-num active-num">002</span><span class="qr-name">Ayşe
+                      Kaya</span><span class="qr-time now-badge">⚡ Şu An</span></div>
+                  <div class="queue-row"><span class="qr-num">003</span><span class="qr-name">M. Öztürk</span><span
+                      class="qr-time">10:15</span></div>
+                  <div class="queue-row"><span class="qr-num">004</span><span class="qr-name">Fatma Arslan</span><span
+                      class="qr-time">11:00</span></div>
+                  <div class="queue-row"><span class="qr-num">005</span><span class="qr-name">Kemal Şahin</span><span
+                      class="qr-time">11:45</span></div>
+                  <div class="queue-row"><span class="qr-num">006</span><span class="qr-name">Hatice Çelik</span><span
+                      class="qr-time">12:30</span></div>
+                </div>
+              </div>
+              <div class="app-screen" data-screen="odeme">
+                <div class="app-topbar">
+                  <span class="app-logo-sm">💰 Ödemeler</span>
+                  <span class="app-filter">Filtre</span>
+                </div>
+                <div class="app-body">
+                  <div class="odeme-summary">
+                    <div class="os-item"><span class="os-label">Toplam</span><span class="os-val">₺486K</span></div>
+                    <div class="os-item os-green"><span class="os-label">Tahsilat</span><span
+                        class="os-val">₺360K</span></div>
+                    <div class="os-item os-red"><span class="os-label">Kalan</span><span class="os-val">₺126K</span>
+                    </div>
+                  </div>
+                  <div class="app-section-title">Müşteri Listesi</div>
+                  <div class="odeme-row"><span class="or-name">Murat Demir</span><span class="or-amount paid-tag">₺4.500
+                      ✓</span></div>
+                  <div class="odeme-row"><span class="or-name">Ayşe Kaya</span><span
+                      class="or-amount part-tag">₺2.800/5.000</span></div>
+                  <div class="odeme-row"><span class="or-name">M. Öztürk</span><span
+                      class="or-amount unpaid-tag">₺0/4.200</span></div>
+                  <div class="odeme-row"><span class="or-name">Fatma Arslan</span><span
+                      class="or-amount paid-tag">₺3.800 ✓</span></div>
+                </div>
+              </div>
+              <div class="app-screen" data-screen="sms">
+                <div class="app-topbar">
+                  <span class="app-logo-sm">📱 Mesajlar</span>
+                  <span class="app-badge-count">Gönder</span>
+                </div>
+                <div class="app-body">
+                  <div class="sms-template-list">
+                    <div class="sms-tmpl active-tmpl">
+                      <span class="sms-icon">🎉</span>
+                      <div>
+                        <div class="sms-title">Bayram Kutlaması</div>
+                        <div class="sms-preview">Sayın [Ad Soyad], Bayramınızı...</div>
+                      </div>
+                    </div>
+                    <div class="sms-tmpl">
+                      <span class="sms-icon">🕐</span>
+                      <div>
+                        <div class="sms-title">Kesim Saati Bildirimi</div>
+                        <div class="sms-preview">Sıra No: [001], Saat: [09:00]</div>
+                      </div>
+                    </div>
+                    <div class="sms-tmpl">
+                      <span class="sms-icon">💳</span>
+                      <div>
+                        <div class="sms-title">Ödeme Hatırlatma</div>
+                        <div class="sms-preview">Bakiyeniz: ₺[TUTAR] kalmaktadır.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="app-send-btn">📤 Toplu Gönder (248 kişi)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="yorumlar">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Yorumlar</span>
+        <h2>Müşterilerimiz Ne Diyor?</h2>
+        <p>Çiftlik sahiplerinin deneyimleri, kendi sözleriyle.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal" id="test-1">
+          <div class="stars">★★★★★</div>
+          <p>"Geçen yıl 200'den fazla müşterimizin kurban sırasını takip etmek çok zordu. Bu uygulama sayesinde kimseyle
+            tartışmadan, düzenli bir Kurban Bayramı geçirdik. Müşteriler de bayıldı!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MM</div>
+            <div>
+              <strong>Mehmet Mutlu</strong>
+              <small>Mutlu Besi Çiftliği — Konya</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" id="test-2">
+          <div class="stars">★★★★★</div>
+          <p>"Ödeme takibi artık çok kolay. Kimin ne kadar borcu var, kim ödedi, hemen görüyorum. Bayram kutlama
+            mesajlarını toplu göndermek de süper. Çok zaman kazandım."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AY</div>
+            <div>
+              <strong>Ali Yıldırım</strong>
+              <small>Yıldırım Çiftlik — Ankara</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" id="test-3">
+          <div class="stars">★★★★★</div>
+          <p>"Müşterilerim tahmini kesim saatini SMS ile alınca inanılmaz memnun oldular. Kimse çiftliğe gelip beklemek
+            zorunda kalmadı. Gelecek yıl daha da fazla müşteri bekliyorum!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">FC</div>
+            <div>
+              <strong>Fatih Çoban</strong>
+              <small>Çoban Besi — Bursa</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta-section" id="iletisim">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="cta-content">
+          <h2>Hızlı Çiftlik'i<br />Yakından Tanıyın</h2>
+          <p>Uygulamayı canlı görmek için bize ulaşın. Web ve Android üzerinde hemen demo yapabiliriz.</p>
+          <div class="cta-contact-options">
+            <a href="tel:+905XXXXXXXXX" class="contact-option" id="ctaPhone">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.12 6.12l.94-.94a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 21.73 17.3l.19-.38z" />
+              </svg>
+              <div>
+                <small>Telefon</small>
+                <strong>0 (5XX) XXX XX XX</strong>
+              </div>
+            </a>
+            <a href="https://wa.me/905XXXXXXXXX" class="contact-option whatsapp" id="ctaWhatsapp" target="_blank"
+              rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.532 5.847L.058 23.617a.5.5 0 0 0 .611.665l5.985-1.57A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.497-5.188-1.367l-.372-.219-3.853 1.011 1.031-3.763-.238-.389A9.941 9.941 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+              </svg>
+              <div>
+                <small>WhatsApp</small>
+                <strong>Hemen Yaz</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="cta-form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <h3>Demo Talep Et</h3>
+            <div class="form-group">
+              <label for="name">Ad Soyad</label>
+              <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" placeholder="0 (5XX) XXX XX XX" required autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="message">Mesaj (İsteğe Bağlı)</label>
+              <textarea id="message" name="message" rows="3"
+                placeholder="Çiftliğiniz hakkında kısaca bilgi verin..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="submitFormBtn">
+              Gönder — Demo İste
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✅ Mesajınız alındı! En kısa sürede sizi arayacağız.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-icon">🐄</span>
+          <div>
+            <span class="footer-name">Hızlı Çiftlik</span>
+            <small>Kurbanlık Yönetim Uygulaması · Könez Besi Çiftliği</small>
+            <small class="footer-location">📍 Samsun, Türkiye</small>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#ozellikler">Özellikler</a>
+          <a href="#nasil-calisir">Nasıl Çalışır</a>
+          <a href="#yorumlar">Yorumlar</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+        <div class="footer-platforms">
+          <p class="footer-plat-label">Mevcut Platformlar</p>
+          <div class="footer-plat-list">
+            <span class="fp-item">🌐 Web</span>
+            <span class="fp-item">🤖 Android</span>
+            <span class="fp-item fp-soon">🍎 iOS · Yakında</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Hızlı Çiftlik · Könez Besi Çiftliği · Tüm hakları saklıdır.</div>
+        <a href="https://bksoftstudio.com" class="powered-by" target="_blank" rel="noopener">
+          Powered by <strong>BK Softstudio</strong>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== STICKY MOBILE BAR ===================== -->
+  <div class="sticky-mobile-bar" id="stickyBar">
+    <a href="tel:+905XXXXXXXXX" class="sticky-btn call" id="stickyPhone">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.12 6.12l.94-.94a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 21.73 17.3l.19-.38z" />
+      </svg>
+      Ara
+    </a>
+    <a href="https://wa.me/905XXXXXXXXX" class="sticky-btn whatsapp" id="stickyWhatsapp" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.532 5.847L.058 23.617a.5.5 0 0 0 .611.665l5.985-1.57A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.497-5.188-1.367l-.372-.219-3.853 1.011 1.031-3.763-.238-.389A9.941 9.941 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
