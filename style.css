@@ -1958,111 +1958,28 @@ button {
   }
 
   .card-1 {
-    left: -60px;
+    left: -70px;
+  }
+
+  .card-2 {
+    right: -70px;
   }
 
   .card-3 {
-    right: -60px;
+    right: -70px;
+  }
+
+  .screens-showcase {
+    gap: 48px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px;
+    padding: 0 18px;
   }
 
-  .hero {
-    padding-top: 100px;
-  }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-desc,
-  .hero-stats,
-  .hero-actions,
-  .app-badges {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-stats {
-    justify-content: center;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .app-badges {
-    justify-content: center;
-  }
-
-  .hero-visual {
-    justify-content: center;
-  }
-
-  .card-1,
-  .card-3 {
-    display: none;
-  }
-
-  .card-2 {
-    top: -20px;
-    right: 0;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .steps-container {
-    grid-template-columns: 1fr;
-  }
-
-  .step-card {
-    height: auto;
-  }
-
-  .screens-showcase {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .screen-mockup-area {
-    order: -1;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid .testimonial-card:last-child {
-    max-width: 100%;
-  }
-
-  .cta-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
+  /* ---- NAVBAR ---- */
   .nav-links {
     display: none;
   }
@@ -2076,10 +1993,12 @@ button {
     right: 0;
     background: rgba(244, 246, 248, 0.98);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     padding: 12px 16px;
     gap: 2px;
     animation: slideDown 0.2s ease;
+    z-index: 999;
   }
 
   @keyframes slideDown {
@@ -2087,7 +2006,6 @@ button {
       opacity: 0;
       transform: translateY(-8px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
@@ -2107,31 +2025,280 @@ button {
     display: none;
   }
 
+  /* ---- HERO ---- */
+  .hero {
+    padding: 100px 0 80px;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 7.5vw, 2.8rem);
+  }
+
+  .hero-desc {
+    max-width: 100%;
+    text-align: center;
+    font-size: 0.97rem;
+  }
+
+  .platform-badges {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 auto;
+    min-width: 150px;
+    justify-content: center;
+  }
+
+  /* All floating cards hidden on mobile — prevent overflow */
+  .card-1,
+  .card-2,
+  .card-3 {
+    display: none;
+  }
+
+  .hero-visual {
+    justify-content: center;
+    order: -1;
+  }
+
+  .hero-phone-wrap {
+    transform: scale(0.9);
+    transform-origin: top center;
+    margin-bottom: -24px;
+  }
+
+  /* ---- FEATURES ---- */
+  .features {
+    padding: 72px 0;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 28px 22px;
+  }
+
+  /* ---- HOW IT WORKS ---- */
+  .how-it-works {
+    padding: 72px 0;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    height: auto;
+    padding: 24px 22px;
+  }
+
+  /* ---- APP SCREENS ---- */
+  .app-screens {
+    padding: 72px 0;
+  }
+
+  .screens-showcase {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .screen-mockup-area {
+    order: -1;
+  }
+
+  .screen-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .screen-tab {
+    text-align: center;
+    padding: 9px 10px;
+    font-size: 0.8rem;
+  }
+
+  .screen-detail h3 {
+    font-size: 1.4rem;
+  }
+
+  /* ---- TESTIMONIALS ---- */
+  .testimonials {
+    padding: 72px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid .testimonial-card:last-child {
+    max-width: 100%;
+    grid-column: auto;
+  }
+
+  /* ---- CTA / CONTACT ---- */
+  .cta-section {
+    padding: 72px 0;
+  }
+
+  .cta-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cta-content h2 {
+    text-align: center;
+  }
+
+  .cta-content p {
+    text-align: center;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .footer-plat-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* ---- STICKY BAR ---- */
   .sticky-mobile-bar {
     display: flex;
   }
 
   body {
-    padding-bottom: 68px;
-  }
-
-  .hero-phone {
-    width: 220px;
-  }
-
-  .features {
-    padding: 72px 0;
-  }
-
-  .how-it-works,
-  .app-screens,
-  .testimonials,
-  .cta-section {
-    padding: 72px 0;
+    padding-bottom: 72px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .hero {
+    padding: 88px 0 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 8.5vw, 2.2rem);
+  }
+
+  .hero-desc {
+    font-size: 0.92rem;
+  }
+
+  /* Full-width buttons on very small screens */
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* Platform badges wrap more tightly */
+  .platform-badges {
+    gap: 6px;
+  }
+
+  .plat-badge {
+    font-size: 0.74rem;
+    padding: 5px 10px;
+  }
+
+  /* Phone mockup slightly smaller */
+  .hero-phone-wrap {
+    transform: scale(0.82);
+    margin-bottom: -36px;
+  }
+
+  /* Section headers smaller */
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+  }
+
+  /* App screen tabs — single column on very small */
+  .screen-tabs {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .screen-tab {
+    text-align: left;
+    padding: 10px 14px;
+  }
+
+  /* CTA form */
+  .cta-form-wrap {
+    padding: 22px 16px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 20px 16px;
+  }
+
+  /* Steps */
+  .step-card {
+    padding: 18px 16px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 36px 0 20px;
+  }
+
+  .footer-copy {
+    font-size: 0.68rem;
+  }
+
+  /* Hero stats */
   .hero-stats {
     flex-direction: column;
     gap: 14px;
@@ -2141,17 +2308,5 @@ button {
   .stat-divider {
     width: 100%;
     height: 1px;
-  }
-
-  .screen-tabs {
-    flex-direction: column;
-  }
-
-  .screen-tab {
-    text-align: left;
-  }
-
-  .cta-form-wrap {
-    padding: 24px 20px;
   }
 }
